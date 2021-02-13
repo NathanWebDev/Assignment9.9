@@ -1,0 +1,166 @@
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+
+/* All Classes Style */
+* {
+  box-sizing: border-box;
+}
+
+/* body, h1, and main Styles */
+body {
+  background-color: black;
+}
+
+h1 {
+  display: block;
+  background-color: whitesmoke;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0px auto;
+}
+
+main {
+  background-color: black;
+}
+
+/* Homescreen and Results screen Style */
+.home-screen,
+.results {
+  padding: 30px;
+}
+
+.home-screen > p,
+.results > p {
+  text-align: center;
+  font-family: monospace;
+  color: rgb(32, 194, 14);
+}
+
+/* Button Style */
+button {
+  display: block;
+  margin: 30px auto;
+  font-family: monospace;
+  background-color: rgb(80, 79, 79);
+  color: rgb(32, 194, 14);
+}
+
+/* Cursor Hover Style */
+input:hover,
+label:hover,
+button:hover {
+  cursor: pointer;
+}
+
+/* HUD Style */
+.hud {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: gainsboro;
+  border: solid black 5px;
+  padding-inline-start: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
+
+.hud > li {
+  display: flex;
+  margin: 0px 10px 5px 10px;
+  border-bottom: solid black 3px;
+}
+
+.hud > #current-question-number > p {
+  display: block;
+  text-align: center;
+  margin: 5px auto 5px;
+}
+
+.hud > #correct-questions > p,
+#incorrect-questions > p {
+  display: block;
+  text-align: center;
+  margin: 10px auto 10px;
+}
+
+/* Question Text and Image Style */
+h2 {
+  background-color: black;
+  text-align: center;
+  font-family: monospace;
+  color: rgb(32, 194, 14);
+}
+
+img {
+  width: 100%;
+}
+
+/* Options Style */
+.options {
+  text-align: center;
+}
+
+label {
+  font-family: monospace;
+  color: rgb(32, 194, 14);
+}
+
+.correct-answer,
+.incorrect-answer {
+  background-color: darkgrey;
+  font-family: monospace;
+  padding: 5px 0px 5px;
+  border: solid #4b4a4a 3px;
+}
+
+.correct-answer {
+  color: darkgreen;
+}
+
+.incorrect-answer {
+  color: darkred;
+}
+
+/* Desktop Style */
+@media all and (min-width: 680px) {
+  h1 {
+    text-align: left;
+    font-size: 45px;
+    padding-left: 20px;
+  }
+
+  .hud {
+    flex-direction: row;
+    width: 300px;
+    margin-right: 5%;
+    border-radius: 10px;
+  }
+
+  .home-screen > p,
+  .results > p {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  .correct-answer,
+  .incorrect-answer {
+    font-size: 20px;
+  }
+}
